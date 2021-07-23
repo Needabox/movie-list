@@ -62,7 +62,6 @@ export default {
         fetch(`https://www.omdbapi.com/?apikey=${env.apikey}&s=${search.value}`)
         .then(response => response.json())
         .then(data => {
-          console.log(data.Search)
           movies.value = data.Search;
           search.value = "";
         });
